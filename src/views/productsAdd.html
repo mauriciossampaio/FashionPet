@@ -1,0 +1,16 @@
+<% include('../layout') %>
+<h2>Lista de Produtos</h2>
+<a href="/products/add">Adicionar Produto</a>
+<ul>
+    <% products.forEach(product => { %>
+        <li>
+            <h3><%= product.name %></h3>
+            <p><%= product.description %></p>
+            <p>Preço: <%= product.price %></p>
+            <a href="/products/edit/<%= product._id %>">Editar</a>
+            <form action="/products/delete/<%= product._id %>" method="POST">
+                <button type="submit">Excluir</button>
+            </form>
+        </li>
+    <% }) %>
+</ul>
