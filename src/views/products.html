@@ -1,0 +1,11 @@
+<% include('../layout') %>
+<h2>Adicionar Produto</h2>
+<form action="/products/add" method="POST">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name">
+    <label for="description">Descrição:</label>
+    <input type="text" id="description" name="description">
+    <label for="price">Preço:</label>
+    <input type="text" id="price" name="price">
+    <button type="submit">Adicionar</button>
+</form>
